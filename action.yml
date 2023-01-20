@@ -1,0 +1,19 @@
+name: 'RunGeth'
+
+description: 'Installs and runs a dev instance of Geth'
+
+author: 'Richard Moore <me@ricmoo.com>'
+
+runs:
+  using: "composite"
+  steps:
+    - run: sudo add-apt-repository -y ppa:ethereum/ethereum
+      shell: bash
+    - run: sudo apt-get update
+      shell: bash
+    - run: sudo apt-get install ethereum
+      shell: bash
+    -run: geth --dev --dev.period 5 --datadir ./blockchain/ init genesis.json
+      shell: bash
+    -run: nohup `which geth` --dev --dev.period 5 --datadir ./blockchain/ --http --http.addr 0.0.0.0 --http.api eth,web3,net
+      shell: bash
