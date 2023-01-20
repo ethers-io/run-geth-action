@@ -9,6 +9,7 @@ Configuration
 
 **workflow.yml**
 
+```javascript
 name: Run Geth
 
 on:
@@ -24,17 +25,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Use Node.js 16.x
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Run Geth
+      - name: Install and run Geth
         uses: ethers-io/run-geth-action
-
+```
         
 License
 -------
