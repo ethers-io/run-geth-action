@@ -1,5 +1,5 @@
-Run Geth
-========
+Install and Run Geth
+====================
 
 This action will install Geth and run a clique instance
 in dev mode.
