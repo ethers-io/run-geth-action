@@ -17,6 +17,7 @@
     "mergeNetsplitBlock": 0,
     "shanghaiTime": 0,
     "terminalTotalDifficulty": 0,
+    "terminalTotalDifficultyPassed": true,
     "clique": {
       "period": 1,
       "epoch": 30000
