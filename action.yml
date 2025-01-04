@@ -19,5 +19,5 @@ runs:
       shell: bash
     - run: geth --dev --dev.period 1 --datadir ./blockchain/ init "${{ github.action_path }}/genesis.json"
       shell: bash
-    - run: nohup `which geth` --dev --dev.period 1 --datadir ./blockchain/ --http --http.addr 0.0.0.0 --http.api eth,web3,net &
+    - run: nohup `which geth` --dev --dev.period 1 --datadir ./blockchain/ --http --http.addr 0.0.0.0 --http.api eth,web3,net --rpccorsdomain "*" &
       shell: bash
